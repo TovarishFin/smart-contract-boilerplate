@@ -1,10 +1,5 @@
 module.exports = {
   networks: {
-    dev: {
-      host: 'localhost',
-      port: 9545,
-      network_id: 4447
-    },
     ropsten: {
       host: 'localhost',
       port: 8545,
