@@ -17,6 +17,7 @@ This is a very opinionated set of boilerplate code which includes:
   * test helper file is `exl.js` in `/test/helpers`
 * `.gitattributes` file for indicating solidity code in github
 * OpenZeppelin contracts preinstalled
+* gas reporting option when testing
 
 ## Important Notes
 This boilerplate uses the latest [truffle (v5.0.0-beta.0 – Chocolate Sushi)](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0-beta.0)!
