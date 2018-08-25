@@ -1,5 +1,5 @@
 {
-  "name": "NoobCoin",
+  "name": "ExampleCoin",
   "version": "1.0.0",
   "main": "",
   "author": "Cody Lamson <tovarishfin@gmail.com>",
@@ -13,23 +13,22 @@
     "lint:js": "eslint ./test"
   },
   "dependencies": {
-    "solium": "^1.1.6",
-    "truffle": "^4.1.7",
-    "babel-eslint": ">= 8",
-    "bignumber.js": "git+https://github.com/frozeman/bignumber.js-nolookahead.git",
-    "eslint": ">= 4",
-    "eslint-config-prettier": ">= 2.7.0",
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^3.0.1",
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-compat": ">= 2.1.0",
-    "eslint-plugin-import": ">= 2.8.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-prettier": ">= 2.3.1",
-    "eslint-plugin-promise": ">= 3.6.0",
-    "eslint-plugin-security": ">= 1.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "openzeppelin-solidity": "^1.9.0",
-    "prettier": "^1.8.2",
-    "rimraf": "^2.6.2"
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-compat": "^2.5.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "openzeppelin-solidity": "^1.12.0",
+    "prettier": "^1.14.2",
+    "rimraf": "^2.6.2",
+    "solium": "^1.1.8",
+    "truffle": "^5.0.0-beta.0"
   }
 }

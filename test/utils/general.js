@@ -1,5 +1,5 @@
 const assert = require('assert')
-const BigNumber = require('bignumber.js')
+const { BN } = web3.utils
 
 const testWillThrow = async (fn, args) => {
   try {
@@ -65,9 +65,9 @@ const sendTransaction = args => {
 
 const addressZero = `0x${'0'.repeat(40)}`
 
-const gasPrice = new BigNumber(30e9)
+const gasPrice = new BN(30e9)
 
-const bigZero = new BigNumber(0)
+const bigZero = new BN(0)
 
 module.exports = {
   testWillThrow,

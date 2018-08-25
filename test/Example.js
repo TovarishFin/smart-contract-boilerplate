@@ -1,13 +1,13 @@
 const assert = require('assert')
 const Example = artifacts.require('./Example.sol')
-const BigNumber = require('bignumber.js')
+const { BN } = web3.utils
 
 describe('when deploying Example', () => {
-  contract('Example', accounts => {
+  contract('Example', () => {
     const name = 'ExampleCoin'
     const symbol = 'EXL'
-    const decimals = new BigNumber(18)
-    const totalSupply = new BigNumber(100e18)
+    const decimals = new BN(18)
+    const totalSupply = new BN('100e18')
 
     let exl
 
