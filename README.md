@@ -33,6 +33,18 @@ This boilerplate uses yarn rather than npm. Change fork and change this locally 
 Everything can be installed through yarn.
 `yarn`
 
+## Using with your Code editor
+For the best experience, make sure to install the following packages for the editor you are using:
+* solium/solidity syntax
+* eslint
+* prettier
+
+In Visual Studio Code this is:
+* [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
+* [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+* [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+
 ## Testing
 First start the local blockchain:
 ```

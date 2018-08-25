@@ -1,6 +1,7 @@
 pragma solidity ^0.4.17;
 
 
+/* solium-disable mixedcase */
 contract Migrations {
   address public owner;
   uint public last_completed_migration;
@@ -25,3 +26,5 @@ contract Migrations {
     upgraded.setCompleted(last_completed_migration);
   }
 }
+
+/* solium-enable mixedcase */

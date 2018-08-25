@@ -11,7 +11,7 @@
     "build": "yarn run clean:contracts && truffle compile",
     "clean:contracts": "rimraf build && truffle compile",
     "clean:install": "rimraf node_modules && yarn install",
-    "lint:contracts": "solium -d ./contracts",
+    "lint:sol": "solium -d ./contracts",
     "lint:js": "eslint ./test",
     "migrate:kovan": "truffle migrate --reset --network kovan",
     "migrate:rinkeby": "truffle migrate --reset --network rinkeby",
