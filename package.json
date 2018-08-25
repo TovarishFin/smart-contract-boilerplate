@@ -12,7 +12,11 @@
     "clean:contracts": "rimraf build && truffle compile",
     "clean:install": "rimraf node_modules && yarn install",
     "lint:contracts": "solium -d ./contracts",
-    "lint:js": "eslint ./test"
+    "lint:js": "eslint ./test",
+    "migrate:kovan": "truffle migrate --reset --network kovan",
+    "migrate:rinkeby": "truffle migrate --reset --network rinkeby",
+    "migrate:ropsten": "truffle migrate --reset --network ropsten",
+    "migrate:mainnet": "truffle migrate --reset --network live"
   },
   "dependencies": {
     "babel-eslint": "^8.2.6",
@@ -36,6 +40,6 @@
     "rimraf": "^2.6.2",
     "solium": "^1.1.8",
     "truffle": "^5.0.0-beta.0",
-    "truffle-hdwallet-provider": "^0.0.6"
+    "truffle-hdwallet-provider": "^1.0.0-web3one.0"
   }
 }

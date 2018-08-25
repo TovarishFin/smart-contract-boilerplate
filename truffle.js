@@ -1,4 +1,5 @@
 const HDWalletProvider = require('truffle-hdwallet-provider')
+
 require('dotenv').config()
 const testnetMnemonic = process.env.TESTNET_MNEMONIC
 const mainnetMnemonic = process.env.MAINNET_MNEMONIC
@@ -38,7 +39,8 @@ module.exports = {
       network_id: 1,
       gas: 6.5e6,
       gasPrice: 5e9,
-      provider: () => new HDWalletProvider(mainnetMnemonic, 'https://mainnet.infura.io')
+      provider: () =>
+        new HDWalletProvider(mainnetMnemonic, 'https://mainnet.infura.io')
     }
   },
   mocha: {
