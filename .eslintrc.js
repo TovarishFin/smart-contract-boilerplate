@@ -40,6 +40,7 @@ module.exports = {
     afterAll: true,
     afterEach: true,
     artifacts: true,
+    assert: true,
     before: true,
     beforeAll: true,
     beforeEach: true,
