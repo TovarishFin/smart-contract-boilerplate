@@ -25,7 +25,7 @@ This means that there are some significant differences which need to be consider
 
 Due to the use of web3 v1.0, events need to be used through websockets which means that ganache-cli must be used (this may not be true... PRs are welcome!). Use `yarn start:blockchain` to use start ganache-cli before testing.
 
-With the new version of web3 also comes a new big number library, bn.js (rather than bignumber.js)
+With the new version of web3 also comes a new big number library, `bn.js` (rather than `bignumber.js`)
 
 This boilerplate uses yarn rather than npm. Change fork and change this locally if you want...
 
@@ -110,6 +110,12 @@ yarn migrate:mainnet
 ## Extending for your Project
 Fork this repo and do whatever you want with it :)
 For information on how to fork see: https://help.github.com/articles/fork-a-repo/
+
+## Improving this Repo
+If you have some helper functions that you find extremely useful please feel free to open up a PR.
+
+## Issues
+Feel free to open up an issue if you find a problem. I cannot guarantee that I will be keeping this repo super up to date... however, I do use this repo for nearly any new projects I work on... so improvements and maintenance are likely.
 
 ## Legal
 This code is given as is, the author is not responsible for any existing bugs. Code is to be used at your own risk. The author is not liable for any damages, monetary or otherwise.
