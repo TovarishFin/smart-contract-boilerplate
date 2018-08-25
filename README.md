@@ -8,14 +8,14 @@ This is a very opinionated set of boilerplate code which includes:
 * commonly used test helper functions (more to come later perhaps...)
   * these can be found in `test/helpers/general.js`
 * truffle config using `truffle-hdwallet-provider`
-  * configs for *kovan*, *rinkeby*, *ropsten*, and *mainnet* included
+  * configs for **kovan**, **rinkeby**, **ropsten**, and **mainnet** included
   * also includes config for `eth-gas-reporter`
 * yarn scripts for testing, migration, and other useful things
 * an example smart contract along with tests and a correlating test helper file
   * test contract is `Example.sol` in `/contracts`
   * contract test file is `Example.js` in `/test`
   * test helper file is `exl.js` in `/test/helpers`
-* .gitattributes file for indicating solidity code in github
+* `.gitattributes` file for indicating solidity code in github
 * OpenZeppelin contracts preinstalled
 
 ## Important Notes
