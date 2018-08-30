@@ -100,27 +100,37 @@ const sendTransaction = args => {
 }
 
 const send = (method, params = []) =>
-  web3.currentProvider.send({
-    id: 0,
-    jsonrpc: '2.0',
-    method,
-    params
-  })
+  web3.currentProvider.send(
+    {
+      id: new Date().getSeconds(),
+      jsonrpc: '2.0',
+      method,
+      params
+    },
+    (err, res) => {
+      if (err) {
+        // eslint-disable-next-line no-console
+        console.log(err)
+        return
+      }
+
+      return res
+    }
+  )
 
 // increases time through ganache evm command
 const timeWarp = async (seconds, logResults) => {
   if (seconds > 0) {
     await send('evm_increaseTime', [seconds])
+    const { timestamp: previousTimestamp } = await web3.eth.getBlock('latest')
     await send('evm_mine')
-
-    const previousBlock = await web3.eth.getBlock(web3.eth.blockNumber - 1)
-    const currentBlock = await web3.eth.getBlock(web3.eth.blockNumber)
+    const { timestamp: currentTimestamp } = await web3.eth.getBlock('latest')
 
     /* eslint-disable no-console */
     if (logResults) {
       console.log(`🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🏳️‍🌈🛸  Warped ${seconds} seconds at new block`)
-      console.log(`⏰  previous block timestamp: ${previousBlock.timestamp}`)
-      console.log(`⏱  current block timestamp: ${currentBlock.timestamp}`)
+      console.log(`⏰  previous block timestamp: ${previousTimestamp}`)
+      console.log(`⏱  current block timestamp: ${currentTimestamp}`)
     }
   } else {
     console.log('❌ Did not warp... 0 seconds was given as an argument')
