@@ -138,6 +138,16 @@ const timeWarp = async (seconds, logResults) => {
   }
 }
 
+const getCurrentBlockTime = async () => {
+  const { timestamp } = await web3.eth.getBlock('latest')
+  return timestamp
+}
+
+const oneBlockDay = 60 * 60 * 24
+const oneBlockWeek = oneBlockDay * 7
+const oneBlockMonth = oneBlockDay * 30
+const oneBlockYear = oneBlockMonth * 12
+
 module.exports = {
   decimals18,
   bigZero,
@@ -152,5 +162,10 @@ module.exports = {
   getEtherBalance,
   getTxInfo,
   sendTransaction,
-  timeWarp
+  timeWarp,
+  getCurrentBlockTime,
+  oneBlockDay,
+  oneBlockWeek,
+  oneBlockMonth,
+  oneBlockYear
 }
