@@ -46,7 +46,7 @@ const areInRange = (num1, num2, range) => {
   const bigNum2 = new BN(num2.toString())
   const bigRange = new BN(range.toString())
 
-  if (bigNum1.equals(bigNum2)) {
+  if (bigNum1.eq(bigNum2)) {
     return true
   }
 
