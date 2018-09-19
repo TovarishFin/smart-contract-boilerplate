@@ -1,14 +1,14 @@
 const { waitForEvent } = require('./general')
 
-const testTransfer = async (exl, to, amount, config) => {
+const testTransfer = async (exc, to, amount, config) => {
   assert(config.from, 'config must have a from address!')
   const { from } = config
-  const preSenderBalance = await exl.balanceOf(from)
-  const preReceiverBalance = await exl.balanceOf(to)
+  const preSenderBalance = await exc.balanceOf(from)
+  const preReceiverBalance = await exc.balanceOf(to)
 
-  const expectedEvent = waitForEvent(exl, 'Transfer')
+  const expectedEvent = waitForEvent(exc, 'Transfer')
 
-  await exl.transfer(to, amount, config)
+  await exc.transfer(to, amount, config)
 
   const transferEvent = await expectedEvent
   const {
@@ -17,8 +17,8 @@ const testTransfer = async (exl, to, amount, config) => {
     value: eventValue
   } = transferEvent.returnValues
 
-  const postSenderBalance = await exl.balanceOf(from)
-  const postReceiverBalance = await exl.balanceOf(to)
+  const postSenderBalance = await exc.balanceOf(from)
+  const postReceiverBalance = await exc.balanceOf(to)
 
   assert.equal(
     preSenderBalance.sub(postSenderBalance).toString(),

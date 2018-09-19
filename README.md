@@ -14,7 +14,7 @@ This is a very opinionated set of boilerplate code which includes:
 * an example smart contract along with tests and a correlating test helper file
   * test contract is `Example.sol` in `/contracts`
   * contract test file is `Example.js` in `/test`
-  * test helper file is `exl.js` in `/test/helpers`
+  * test helper file is `exc.js` in `/test/helpers`
 * `.gitattributes` file for indicating solidity code in github
 * OpenZeppelin contracts preinstalled
 * gas reporting option when testing
