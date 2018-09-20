@@ -5,6 +5,9 @@
   "author": "Cody Lamson <tovarishfin@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "docs:init": "yarn run doxity init",
+    "docs:build": "yarn run doxity build",
+    "docs:publish": "yarn run doxity publish",
     "start:blockchain": "ganache-cli -d -m 'candy maple velvet cake sugar cream honey rich smooth crumble sweet treat' -g 5e9",
     "test": "truffle compile && truffle test",
     "test:gas-reporter": "GAS_REPORTER=true yarn run test",
