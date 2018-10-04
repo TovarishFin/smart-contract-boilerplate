@@ -36,6 +36,7 @@ module.exports = {
   globals: {
     __DEV__: true,
     __dirname: true,
+    accounts: true,
     after: true,
     afterAll: true,
     afterEach: true,

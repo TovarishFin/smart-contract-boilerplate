@@ -1,4 +1,49 @@
-const { waitForEvent } = require('./general')
+const ExampleCoin = artifacts.require('./ExampleCoin.sol')
+const { waitForEvent, owner, decimals18 } = require('./general')
+const { BN } = web3.utils
+
+const defaultName = 'ExampleCoin'
+const defaultSymbol = 'EXC'
+const defaultDecimals = new BN(18)
+const defaultTotalSupply = new BN(100).mul(decimals18)
+
+const setupContract = async () => {
+  const exc = ExampleCoin.new(
+    defaultName,
+    defaultSymbol,
+    defaultDecimals,
+    defaultTotalSupply,
+    {
+      from: owner
+    }
+  )
+
+  return { exc }
+}
+
+const testInitialization = async exc => {
+  const name = await exc.name()
+  const symbol = await exc.symbol()
+  const decimals = await exc.decimals()
+  const totalSupply = await exc.totalSupply()
+
+  assert.equal(name, defaultName, 'name should match name given in constructor')
+  assert.equal(
+    symbol,
+    defaultSymbol,
+    'symbol should match symbol given in constructor'
+  )
+  assert.equal(
+    decimals.toString(),
+    defaultDecimals.toString(),
+    'decimals should match decimals given in constructor'
+  )
+  assert.equal(
+    totalSupply.toString(),
+    defaultTotalSupply.toString(),
+    'totalSupply should match totalSupply given in constructor'
+  )
+}
 
 const testTransfer = async (exc, to, amount, config) => {
   assert(config.from, 'config must have a from address!')
@@ -40,5 +85,7 @@ const testTransfer = async (exc, to, amount, config) => {
 }
 
 module.exports = {
+  setupContract,
+  testInitialization,
   testTransfer
 }
