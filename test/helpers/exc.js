@@ -18,7 +18,7 @@ const setupContract = async () => {
     }
   )
 
-  return { exc }
+  return exc
 }
 
 const testInitialization = async exc => {
